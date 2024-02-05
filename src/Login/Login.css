@@ -1,0 +1,109 @@
+.LogIn-Page {
+    width: 100%;
+    height: 100%;
+    background-image: url("../Images/LoginImage.avif");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .LogIn-Page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .LogIn-Form {
+    background-color: white;
+    width: 50%;
+    height: fit-content;
+    border-radius: 2px;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(0px) saturate(180%);
+    -webkit-backdrop-filter: blur(0px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.686);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .LogIn-title {
+    margin: 0;
+    text-align: center;
+    margin-left: 1%;
+  }
+  .Login-Email,
+  .Login-Password {
+    border: 2px solid #333;
+    border-radius: 3px;
+    outline: none;
+    outline-offset: none;
+    width: 100%;
+    margin: 1%;
+    padding: 1.5%;
+    font-size: medium;
+  }
+  
+  .Login-btns {
+    margin: 0.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .Login-Submitbtn {
+    width:20%;
+    border: none;
+    border-radius: 3px;
+    background-color: #333;
+    transition: background-color 0.5s;
+    color: white;
+    padding: 2%;
+    margin: 1% 2%;
+    cursor: pointer;
+  }
+  .Login-Submitbtn:hover {
+    background-color: #222;
+  }
+  
+  .Login-Err {
+    color: red;
+    text-align: start;
+    margin: 0.1% 1%;
+  }
+  
+  .Login-Email-label,
+  .Login-Password-label {
+    text-align: start;
+    margin: 2% 0 0 1%;
+    font-size: large;
+    font-weight: bold;
+  }
+
+@media (max-width:768px)
+{
+  .LogIn-Form
+  {
+    width: 75%;
+  }  
+}
+
+@media (max-width:500px)
+{
+   .LogIn-Form
+   {
+    width: 90%;
+   }
+   .Login-Submitbtn
+   {
+    width: 25%;
+   }
+}

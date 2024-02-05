@@ -1,0 +1,67 @@
+.Navbar {
+    background-color: #222;
+    color: white;
+    position: relative;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .Navbar-Logo-div {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+  }
+  .Navbar-Logo {
+    width: 50%;
+    height: 100%;
+    margin-left: 2%;
+  }
+  .Navbar-Logo-title {
+    width: 50%;
+    margin-left: 2%;
+    align-self: center;
+  }
+  
+  .Navbar-items {
+    width: 100%;
+    height: 80%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .Navbar-items button,
+  .Navbar-links {
+    width: 100%;
+    padding: 8%;
+    margin-top: 1%;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .Navbar-links:hover {
+    border-left: 3px solid gold;
+  }
+  .Navbar-links.active {
+    border-left: 3px solid gold;
+  }
+  
+  .Navbar-items button {
+    border: none;
+    background-color: transparent;
+  }
+  .Navbar-items button:hover {
+    border-left: 3px solid gold;
+    cursor: pointer;
+  }
+  .Couponbtn
+  {
+    font-size: large;
+  }

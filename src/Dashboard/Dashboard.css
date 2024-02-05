@@ -1,0 +1,232 @@
+.Dashboard-Page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .Dashboard {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Dashboard-Empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Dashboard-CardDeck {
+    background-color: whitesmoke;
+    width: 100%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+  
+  .Dashboard-Card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+  
+  .Dashboard-Details {
+    margin: auto;
+    padding: 1.5% 0;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .Dashboard-Img {
+    width: 40%;
+    height: auto;
+    padding-left: 0.5%;
+  }
+  
+  .Dashboard-CarImg {
+    width: 100%;
+    max-height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .Dashboard-CarDetails {
+    width: 60%;
+    height: 100%;
+    margin-left: 1%;
+  }
+  
+  .Dashboard-CarDetails-Name {
+    width: fit-content;
+    padding: 0% 3%;
+  }
+  
+  .Dashboard-CarDetails-Name h2 {
+    margin: 0;
+    text-transform: uppercase;
+  }
+  
+  .Dashboard-CarDetails-HostDetails,
+  .Dashboard-CarDetails-Type,
+  .Dashboard-CarDetails-Primary {
+    padding: 1%;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .Dashboard-CarDetails-Type b,
+  .Dashboard-CarDetails-Primary b {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .Dashboard-CarDetails-Type span,
+  .Dashboard-CarDetails-Primary span,
+  .Dashboard-CarDetails-HostDetails span {
+    font-weight: normal;
+    margin-left: 2px;
+  }
+  
+  .Dashboard-CarDetails-Host {
+    margin-top: 1%;
+  }
+  
+  .Dashboard-CarDetails-btns {
+    width: 100%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .Dashboard-CarDetails-Viewbtn,
+  .Dashboard-CarDetails-Tickbtn,
+  .Dashboard-CarDetails-Cancelbtn {
+    border: none;
+    border-radius: 3px;
+    background-color: #222;
+    width: 25%;
+    color: white;
+    margin: 0 1%;
+    padding: 2%;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  
+  .Dashboard-CarDetails-Viewbtn:hover {
+    background-color: #111;
+  }
+  
+  .Dashboard-CarDetails-Tickbtn {
+    background-color: #27ae60;
+    width: 15%;
+  }
+  
+  .Dashboard-CarDetails-Cancelbtn {
+    background-color: #e74c3c;
+    width: 15%;
+  }
+  
+  .Dashboard-CarDetails-Cancelbtn:hover {
+    background-color: rgb(178, 43, 28);
+  }
+  
+  .Dashboard-CarDetails-Tickbtn:hover {
+    background-color: #1d8649;
+  }
+  
+  .ModalInsurance,
+  .ModalRCBook {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .ModalReason-title {
+    background-color: #111;
+    padding: 1%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ModalReason {
+    padding: 3% 0;
+  }
+  
+  .ModalReason q {
+    font-size: larger;
+    margin-bottom: 1%;
+  }
+  
+  .ModalReason div {
+    width: 85%;
+    margin-left: 2%;
+    font-size: larger;
+  }
+  
+  .Dashboard-TopCardDeck {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .Dashboard-Top {
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 10px;
+    width: 20%;
+    padding: 0.5%;
+    margin: 1%;
+    margin-left: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  #Dashboard-Top-1:hover,
+  #Dashboard-Top-2:hover,
+  #Dashboard-Top-3:hover,
+  #Dashboard-Top-4:hover {
+    border: 2px solid green;
+  }
+  
+  .Dashboard-Top-title {
+    width: 100%;
+    height: fit-content;
+    padding: 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .Dashboard-Top-title h3 {
+    margin: 0;
+  }
+  
+  .Dashboard-Top-info {
+    width: 100%;
+    padding: 1% 3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .Dashboard-Top-info h2 {
+    margin: 0;
+    margin-left: 5%;
+  }
+  

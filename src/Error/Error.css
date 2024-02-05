@@ -1,0 +1,43 @@
+.ErrorPage
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url('../Images/ErrorCarImage.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+.ErrorPage-info
+{
+    padding: 1.5%;
+    font-size: larger;
+    margin-right: 2%;
+    backdrop-filter: blur(0px) saturate(200%);
+    -webkit-backdrop-filter: blur(0px) saturate(200%);
+    background-color: rgba(0, 0, 0, 0.71);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    
+}
+
+.ErrorPage-Footer button
+{
+    background-color:  rgb(223, 67, 67);
+    color: #fff;
+    display: inline-block;
+    padding:1.5%;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.ErrorPage-Footer button:hover
+{
+    cursor: pointer;
+}
