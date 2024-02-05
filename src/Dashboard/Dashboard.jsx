@@ -83,7 +83,7 @@ const Dashboard=()=>
 
   const getCarDetails=async()=>
   {
-    const {data}=await axios.get('http://localhost:8000/Dashboard')
+    const {data}=await axios.get('https://drive-easy-admin-server.vercel.app/Dashboard')
     if(data.length>0)
     {
       SetisArray(false)
@@ -98,7 +98,7 @@ const Dashboard=()=>
 
   const getCardCount=async()=>
   {
-    const {data}=await axios.get('http://localhost:8000/ActiveCount')
+    const {data}=await axios.get('https://drive-easy-admin-server.vercel.app/ActiveCount')
     SetCardCount(data)
   }
   
@@ -120,7 +120,7 @@ const Dashboard=()=>
 
   const Approve=async(car_no,sid)=>
   {
-    const {data}=await axios.post('http://localhost:8000/VerifyCar',{car_no,sid})
+    const {data}=await axios.post('https://drive-easy-admin-server.vercel.app/VerifyCar',{car_no,sid})
     if(data.action)
     {
       openNotification('The car has been Approved')
@@ -132,7 +132,7 @@ const Dashboard=()=>
   {
     if(Reason!=='' && Reason!==null && Reason!==undefined)
     {
-      const {data}=await axios.post('http://localhost:8000/DeleteCar',{singlecar,Reason})
+      const {data}=await axios.post('https://drive-easy-admin-server.vercel.app/DeleteCar',{singlecar,Reason})
       if(data.action)
       {
         SetReasonPrompt(false)

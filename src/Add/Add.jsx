@@ -53,7 +53,7 @@ const Add=()=>
 
     const getFiltersMetaData=async()=>
     {
-        const {data}=await axios.get('http://localhost:8000/FiltersMetaData')
+        const {data}=await axios.get('https://drive-easy-admin-server.vercel.app/FiltersMetaData')
         SetFuel(data[0].Fuel)
         SetMake(data[0].Make)
         SetModel(data[0].Model)
@@ -68,7 +68,7 @@ const Add=()=>
     {
         if((FormDetails.Fuel!=='' && FormDetails.Fuel!==undefined ) || (FormDetails.Make!=='' && FormDetails.Make!==undefined) || (FormDetails.Model!==undefined && FormDetails.Model!=='') || (FormDetails.Type!==undefined && FormDetails.Type!==''))
         {
-            const {data}=await axios.post('http://localhost:8000/UpdateMetaData',{FormDetails,Fuel,Make,Model,Type})
+            const {data}=await axios.post('https://drive-easy-admin-server.vercel.app/UpdateMetaData',{FormDetails,Fuel,Make,Model,Type})
             if(data.action)
             {
                 openNotification('Details Added')

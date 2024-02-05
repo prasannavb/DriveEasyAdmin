@@ -66,7 +66,7 @@ const Login = () => {
     };
   
     const LoginInDetails = async () => {
-      const { data } = await axios.post("http://localhost:8000/", formdata);
+      const { data } = await axios.post("https://drive-easy-admin-server.vercel.app/", formdata);
       if (data.action) {
         sessionStorage.setItem("userAuth", true);
         Navigate("/Dashboard");

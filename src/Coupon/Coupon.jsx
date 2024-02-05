@@ -30,7 +30,7 @@ const Coupon=()=>
         const randomIndex = Math.floor(Math.random() * characters.length);
         couponCode += characters[randomIndex];
       }
-      const {data}=await axios.post('http://localhost:8000/GenerateCouponCode',{Discount,couponCode})
+      const {data}=await axios.post('https://drive-easy-admin-server.vercel.app/GenerateCouponCode',{Discount,couponCode})
       if(data.action)
       {
         openNotification(`Coupon generated Successfully ${couponCode}`) 
