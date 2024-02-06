@@ -18,7 +18,7 @@ import Navbar from '../Navbar/Navbar'
 
 //firebase
 import {storage} from '../Config/firebase'
-import { getDownloadURL,ref} from 'firebase/storage'
+import { getDownloadURL,ref,listAll,deleteObject} from 'firebase/storage'
 
 const Dashboard=()=>
 {
@@ -128,6 +128,24 @@ const Dashboard=()=>
     }
   }
   
+  async function deleteFolderContents(folderRef) {
+    try {
+        const folderRes = await listAll(folderRef);
+        folderRes.items.forEach((itemRef) => {
+            deleteObject(itemRef).then(() => {
+            }).catch((error) => {
+                console.error('Error deleting item:', itemRef.fullPath, error);
+            });
+        });
+        folderRes.prefixes.forEach((prefixRef) => {
+            deleteFolderContents(prefixRef);
+        });
+    } catch (error) {
+        console.error("Error deleting folder contents:", error);
+    }
+}
+
+  
   const Decline=async()=>
   {
     if(Reason!=='' && Reason!==null && Reason!==undefined)
@@ -138,6 +156,23 @@ const Dashboard=()=>
         SetReasonPrompt(false)
         Setloading(true)
         getCarDetails()
+
+       const folderRef = ref(storage,`/CarImages/${singlecar.sid}/${singlecar.car_no}`);
+       listAll(folderRef)
+       .then((res) => {
+         res.items.forEach((itemRef) => {
+           deleteObject(itemRef).then(() => {
+             }).catch((error) => {
+               console.error('Error deleting item:', itemRef.fullPath, error);
+             });
+         });
+         res.prefixes.forEach((prefixRef) => {
+       deleteFolderContents(prefixRef);
+   });
+   })
+   .catch((error) => {
+   console.error('Error listing items:', error);
+   });
       }
     }    
     else

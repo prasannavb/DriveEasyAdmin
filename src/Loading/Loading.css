@@ -1,0 +1,62 @@
+.Loading-div-1,.Loading-div-2,.Loading-div-3,.Loading-div-4
+{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    margin-left:5px;
+    animation-name: Loading;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+}
+.Loading-div-1
+{
+    animation-delay: 1s;
+    background-color: rgb(223, 67, 67);
+}
+.Loading-div-2
+{
+    animation-delay: 2s;
+    background-color: #ffd666;
+
+}
+.Loading-div-3
+{
+    animation-delay: 1s;
+    background-color: #007bff;
+
+}
+.Loading-div-4
+{
+    animation-delay: 2s;
+    background-color: #27AE60;
+
+}
+
+@keyframes Loading {
+    0%   {transform:translateY(5px);}
+  25%  {transform:translateY(15px);}
+  50%  {transform:translateY(15px);}
+  100% {transform:translateY(5px);}
+  }
+
+.Loading
+{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.Loading-Page
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+}
