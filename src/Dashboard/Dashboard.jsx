@@ -15,6 +15,7 @@ import './Dashboard.css'
 
 //Modules
 import Navbar from '../Navbar/Navbar'
+import Loading from '../Loading/Loading'
 
 //firebase
 import {storage} from '../Config/firebase'
@@ -104,7 +105,8 @@ const Dashboard=()=>
   
   const ShowInsurance=async(car_no,sid)=>
   {
-    let imgref=ref(storage,`/CarImages/${sid}/${car_no}/Insurance`)
+    console.log(car_no,sid)
+    let imgref=ref(storage,`/CarImages/${sid}/${car_no}/Insurance.jpg`)
     const imgdata=await getDownloadURL(imgref)
     SetImage(imgdata)
     SetInsurance(true)
@@ -112,7 +114,7 @@ const Dashboard=()=>
 
   const ShowRCBook=async(car_no,sid)=>
   {
-    let imgref=ref(storage,`/CarImages/${sid}/${car_no}/Insurance`)
+    let imgref=ref(storage,`/CarImages/${sid}/${car_no}/RCBook.jpg`)
     const imgdata=await getDownloadURL(imgref)
     SetImage(imgdata)
     SetRCBook(true)
@@ -124,7 +126,7 @@ const Dashboard=()=>
     if(data.action)
     {
       openNotification('The car has been Approved')
-      setTimeout(() => {getCarDetails()}, 2000);
+      setTimeout(() => {getCarDetails(),getCardCount()}, 2000);
     }
   }
   
@@ -200,7 +202,7 @@ const Dashboard=()=>
 
   if(loading)
   {
-    return <h2>Loading</h2>
+    return (<Loading/>)
   }
   
   return(
